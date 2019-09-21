@@ -3,21 +3,31 @@
         <title>WASTEWATERSOUP</title>
     </head>
     <body bgcolor="ff1100">
-        <fontface = "arial">
+        <div>
         <p><i>
         <HR color ="00677"> 
         <H1>SOUP AF </H1>
         <H2>bad kids europe</H2>
-
-        <br>
+        </div>
+        
+     
         </i>SOUP LIMAR MREG </p>
+       
         <p><em>pure love entertainment </em>
             <br> 
         come and take a trip with me to a land where love is free follow me into the light everythings gonna be alright    
         </p>
-        <img src ="file:C:\Users\borowski\Desktop\soupwastelimar.jpeg">
+       
+        {% for post in posts %}
+        <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+{% endfor %}
         <br>
         <HR color ="00677"> 
+        
             <cite>NERDY AF</cite>
         </fontface>
     </body>
